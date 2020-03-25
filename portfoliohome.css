@@ -53,8 +53,8 @@ div.top_container {
   
   /* Change background color of buttons on hover */
 .tab button:hover {
-    background: url(portfolio/phuquocsunset.jpeg) no-repeat center center static;
-    color: white;
+    background: url(portfolio/phuquocsunset.jpeg);
+    color: navy;
     display: flex;
   }
   
