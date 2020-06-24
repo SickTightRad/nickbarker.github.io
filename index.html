@@ -8,7 +8,7 @@
 </head>
 <body>
   <script>
-    function openCity(evt, cityName) {
+    function openTab(evt, tabName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
@@ -18,22 +18,34 @@
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
-      document.getElementById(cityName).style.display = "block";
+      document.getElementById(tabName).style.display = "block";
       evt.currentTarget.className += " active";
     }
+
+  
+    
   </script>
     <div class="top_container">
         <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'Web Development')">Web Development</button>
-        <button class="tablinks" onclick="openCity(event, 'Bio')">Bio</button>
-        <button class="tablinks" onclick="openCity(event, 'Photos')">Photography</button>
+        <button class="tablinks" onclick="openTab(event, 'Web Development')">Projects</button>
+        <button class="tablinks" onclick="openTab(event, 'Bio')">About</button>
+        <button class="tablinks" onclick="openTab(event, 'Photos')">Photography</button>
+        <button class="tablinks" onclick="openTab(event, 'Nicq')">Nicq</button>
       </div>
-      
     </div>
-    
+
+    <br><br><br>
+
+
+    <div id="Nicq" style="display: block;" class="tabcontent">
+      <h1>Hello!</h1>
+      <h3> My name is Nicq, and I love to design and build software applications for the web!</h3>
+      <p> </p>
+    </div>
+
       <div id="Web Development" class="tabcontent">
-        <h3>Web Development</h3>
-        <p>I am a web developer</p>
+        <h3>Projects</h3>
+        <p></p>
         <body>
           <div class="row">
             <div class="column">
@@ -48,15 +60,38 @@
       </div>
       
       <div id="Bio" class="tabcontent">
-        <h3>Bio</h3>
+        <h3>About</h3>
         <body>
           <div class="row">
-            <div class="column">
-                <div class="item">Flex Item 1</div>
-                <div class="item">Flex Item 2</div>
-                <div class="item">Flex Item 3</div>
-                <div class="item">Flex Item 4</div>
-                <div class="item">Flex Item 5</div>
+            <div class="bio_column">
+                
+                  <p>&nbsp &nbsp Nicq Barker is an accomplished software developer, volunteer, former surgical assistant,
+                    and
+                    cat-dad based out of Portland, Oregon. Nicq began programming at age 10, where he began playing with
+                    LOGO on his dad's computer. The feeling of completing a circle was too much for him to let go.
+                    Around this same time, Nicq was involved in a pool-side accident that left him without front teeth!
+                    After hours in the Dental Chair, Nicq emerged as a dental enthusiast!</p></br>
+                    </div>
+            <div class="bio_column">
+                  <p>&nbsp &nbsp Upon completion of his B.S. in Psychology from the University of Idaho, Nicq studied as
+                    an
+                    oral
+                    surgery assistant for several years before moving to Portland and working for a very successful surgeon. Finally
+                    the technology had caught up! 80% of his job was done at a computer, he learned how to design and 3D
+                    print surgical guides to place dental implants. He learned how to copy bone structure from an x-ray
+                    and 3D print a replica to ensure a tight fitting titanium mesh membrane prior to surgery, he would
+                    even take digial scans of patient's teeth and their prosthetics for complete upper and lower implant
+                    supported dentures!</p>
+                    </div>
+                    <div class="bio_column">
+                    <p>&nbsp &nbsp Nicq worked with several different software companies and programs through his surgical
+                      endeavors, and he found himself getting deeper and deeper into the technical side of software. How
+                      does this work? How was this designed? What the heck is python?</p>
+                    <p>&nbsp &nbsp Fast forward to today, Nicq is combining his software expertise, love of people, love
+                      for helping others, and humor to make any team he is part of stronger, and any work environment,
+                      remote or otherwise, considerably more fun!</p>
+                          </div>
+                  
             </div>
             </div>
         </body>

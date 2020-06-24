@@ -1,10 +1,9 @@
 html { 
-  background-color: rgba(to left (50, 50, 250, .6), (50, 50, 150, .6));
+  background: linear-gradient(to top right, #196CA6, #0026ffc2, #059E98) no-repeat center center fixed;
+  background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  box-sizing: border-box;
   }
 
 *, *:before, *:after {
@@ -12,28 +11,27 @@ html {
 }
 
 div.top_container {
-    width: 97vw;
-    height: auto;
+    width: 95vw;
     display: flex;
     padding: 2px 6px;
-    background-color: #5cfff1;
+    background-color: #4419A6;
     flex-direction: row;
     flex-wrap: nowrap;
-    border-radius: 1em;
+    border-radius: .5em;
     transition-duration: 2s;
     box-shadow: 0 10px 20px rgba(0,0,0,0.8), 0 0px 0px rgba(0,0,0,0.25);
+    align-content: center;
 }
 
 /* Style the tab */
 .tab {
     display: flex;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: lightblue;
+    width: 100%;
     border-radius: 25px;
-    width: 98vw;
-    margin: 2em;
-    padding: 1px;
-    align-items: flex-start;
+    margin: 1em;
+    padding: 2px;
     align-content: center;
     align-self: center;
   }
@@ -45,22 +43,24 @@ div.top_container {
     flex-wrap: nowrap;
     border: none;
     color: rgb(255, 255, 255);
-    padding: 16px 32px;
+    padding: 10px 20px;
     text-align: center;
-    font-size: 100%;
+    font-size: 120%;
     margin: 4px 2px;
     transition: 0.8s;
     width: 98%;
     align-content: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     border-radius: 25px;
+    outline: none;
     }
-  
+
   /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: orchid;
+    background-color: #7C179C;
     display: flex;
     transition-duration: 1s;
+    outline: none;
   }
   
   /* Create an active/current "tab button" class */
@@ -68,19 +68,22 @@ div.top_container {
     display: flex;
     opacity: 0;
     transition-duration: 0.4s;
-    background-color: yellow;     
+    background-color: yellow;
+    outline: none; 
   }
   
   /* Style the tab content */
 .tabcontent {
-    width: 97vw;
+    width: 95vw;
     height: auto;    
     display: flex;
     padding: 2px 6px;
     border: 1px solid #ccc;
+    border-radius: 25px;
     display: none;
     box-shadow: 0px 0px 0px 0px 10px rgba(0,0,0,0.6);
     transition-duration: 2s;
+    color: white;
 }
 
 .row {
@@ -99,6 +102,13 @@ div.top_container {
   padding: 0 4px;
 }
 
+.bio_column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 30%;
+  max-width: 30%;
+  padding: 0 4px;
+}
+
 .column img {
   margin-top: 8px;
   vertical-align: middle;
@@ -112,11 +122,21 @@ div.top_container {
     flex: 50%;
     max-width: 50%;
   }
+  .bio_column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .bio_column {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
@@ -137,4 +157,39 @@ div.container{
     width: 100%;
       }
 
-    
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1.2s;
+  animation: fadeEffect 1.2s;
+}
+
+h1, h3{
+  display: block;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1.2s;
+  animation: fadeEffect 3s;
+  color: white;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
