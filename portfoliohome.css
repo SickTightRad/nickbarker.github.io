@@ -7,7 +7,28 @@ html {
   }
 
 *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 div.top_container {
@@ -73,17 +94,18 @@ div.top_container {
   }
   
   /* Style the tab content */
-.tabcontent {
+
+  .tabcontent {
     width: 95vw;
-    height: auto;    
-    display: flex;
-    padding: 2px 6px;
     border: 1px solid #ccc;
     border-radius: 25px;
     display: none;
     box-shadow: 0px 0px 0px 0px 10px rgba(0,0,0,0.6);
-    transition-duration: 2s;
+    /* transition-duration: 2s; */
     color: white;
+    -webkit-animation: fadeEffect 1.2s;
+    animation: fadeEffect 1.2s;
+    padding: 10px;
 }
 
 .row {
@@ -94,7 +116,7 @@ div.top_container {
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create four equal columns that sit next to each other */
 .column {
   -ms-flex: 25%; /* IE10 */
   flex: 25%;
@@ -105,8 +127,9 @@ div.top_container {
 .bio_column {
   -ms-flex: 25%; /* IE10 */
   flex: 30%;
-  max-width: 30%;
-  padding: 0 4px;
+  max-width: 33%;
+  display: block;
+  margin: 10px;
 }
 
 .column img {
@@ -124,8 +147,8 @@ div.top_container {
   }
   .bio_column {
     -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
+    flex: 100%;
+    max-width: 100%;
   }
 }
 
@@ -140,6 +163,7 @@ div.top_container {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
+    margin: auto;
   }
 }
 .clearfix::after{
@@ -147,6 +171,7 @@ div.top_container {
     clear: both;
     display: table;
 }
+
 div.container{
     display: flex;
 }
@@ -158,38 +183,12 @@ div.container{
       }
 
 /* Style the tab content */
-.tabcontent {
+/* .tabcontent {
   display: none;
   padding: 6px 12px;
   -webkit-animation: fadeEffect 1.2s;
   animation: fadeEffect 1.2s;
-}
+} */
 
-h1, h3{
-  display: block;
-  padding: 6px 12px;
-  -webkit-animation: fadeEffect 1.2s;
-  animation: fadeEffect 3s;
-  color: white;
-}
 
-/* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
 
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
