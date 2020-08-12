@@ -1,10 +1,10 @@
 //I know it's kind of dumb, but I'm proud of this timer!
 
 
-let time = 0;
+let time = 0.00;
 let x = setInterval(function () {
     document.getElementById("stopwatch_display").innerHTML = " " + time + " ";
-    time = time + 1;
+    time = time + 1.00;
 }, 1000);
 
 function clearTime() {
