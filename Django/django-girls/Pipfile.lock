@@ -29,7 +29,7 @@
                 ""
             ],
             "index": "pypi",
-            "version": "==3.1"
+            "version": "==3.1.12"
         },
         "pytz": {
             "hashes": [
