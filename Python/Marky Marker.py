@@ -1,18 +1,15 @@
 #This is a comment
 
-star = '*'
+star = '*****'
 
-print(star * 5 + "Welcome to the Funky Buncher"+ star * 5)
+print(star + " Welcome to the Funky Buncher " + star)
 #print("WELCOME TO THE FUNKY BUNCHER!")
 
 username = input("enter your name here :")
 
-if username == "Marky Mark":
+if username == "Marky Mark" or  " Marky Mark":
     print("Ah yes, Marcus, I shall name you:" )
-    username = "Marky Mark and the Funky Bunch"
+    username = "Marky Mark and the Funky Bunch!"
     print(username)
 else:
-    pass
-
-
-print("Username is: " + username)
+    print("Username is: " + username)
